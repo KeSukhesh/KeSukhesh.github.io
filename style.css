@@ -67,9 +67,13 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+.typewriter{
+    display: inline-block;
+}
 .header-text{
     margin-top: 20%;
     font-size: 30px;
+
 }
 .header-text h1{
     font-size: 60px;
@@ -80,13 +84,31 @@ nav ul li a:hover::after{
     font-family: 'ComputerModernTT';
     color: #a1b6d1;
 }
-.container p{
+.header-text p{
+    
     font-family: 'ComputerModernTT';
+    overflow: hidden;
+    border-right: .15em solid #a1b6d1;
+    white-space: nowrap;
+    animation: 
+        typing 1.5s steps(20, end),
+        animated-cursor .5s step-end infinite;
 }
+
+@keyframes typing{
+    from { width: 0}
+    to { width: 100%}
+}
+@keyframes animated-cursor{
+    from, to { border-color: transparent}
+    50% { border-color: #a1b6d1;}
+}
+
+/* --- About Me --- */
 
 #about{
     padding: 80px 0;
-    color: #a1b6d1;
+    color: #ffffff;
 }
 .row{
     display: flex;
@@ -107,11 +129,10 @@ nav ul li a:hover::after{
     font-size: 60px;
     font-weight: 600;
     font-family: 'ComputerModern';
-    color: white;
+    color: #ffffff;
 }
 
 .about-col-2 p{
-    flex-basis: 60%;
     font-family: 'ComputerModernTT';
 }
 
@@ -126,3 +147,151 @@ nav ul li a:hover::after{
     cursor: pointer;
     position: relative;
 }
+.tab-links::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    background: #a1b6d1;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    font-family: 'ComputerModern';
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #a1b6d1;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* --- Services --- */
+
+#services{
+    padding: 30px 0;
+
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 5px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background-color: #a1b6d1;
+    transform: translateY(-10px);
+}
+
+/* --- Portfolio --- */
+#portfolio{
+    padding: 50px 0;
+
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.5), #a1b6d1);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #a1b6d1;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover .layer{
+    height: 100%;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #a1b6d1;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: backgound 0.5s;
+}
+.btn:hover{
+    background: #a1b6d1;
+}   

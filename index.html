@@ -1,37 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style type="text/css">
-        @font-face {
-          font-family: "Computer Modern";
-          src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
-        }
-        @font-face {
-          font-family: "Computer Modern";
-          src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
-          font-weight: bold;
-        }
-        @font-face {
-          font-family: "Computer Modern";
-          src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
-          font-style: italic, oblique;
-        }
-        @font-face {
-          font-family: "Computer Modern";
-          src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
-          font-weight: bold;
-          font-style: italic, oblique;
-        }
-      
-        body {
-          font-family: "Computer Modern", sans-serif;
-        }
-      </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatiblee" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KeSukhesh's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/664f907d21.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
@@ -41,17 +16,20 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
+                <li><a href="#">TEMPLATE(services)</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
         <div class="header-text">
             <h1>Hi, I'm <span>Sukhesh Patro</span><br> From Australia</h1>
-            <p>UNSW Computer Science Student</p>  
+            <div class="typewriter">
+                <p>Computer Science Student @UNSW Sydney.</p>  
+            </div>
         </div>
     </div>
 </div>
-
+<!---------- about me section----------------- -->
 <div id="about">
     <div class="container">
         <div class="row">
@@ -60,18 +38,117 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p> abcdefghsdasda sample text </p>
+                <p> (sample text) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut est justo. Donec vel congue turpis, quis porta augue. In nec tincidunt eros, et placerat sapien. Phasellus vehicula egestas neque. Donec lorem tellus, eleifend quis gravida vitae, iaculis vel nunc. Pellentesque et ante at tellus bibendum semper vel at sem. Duis vitae sem tortor. Nam nec eleifend lorem. Ut ac augue et ex ornare vehicula sed auctor massa. </p>
 
                 <div class="tab-titles">
-                    <p class="tab-links">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Computer Science Student</span><br>Aspiring Software Engineer</li>
+                        <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+                        <li><span>Literally nothing</span><br>I'm just a student ;\</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024?</span><br>I WILL GET AN INTERNSHIP!!</li>
+                        <li><span>But for now</span><br>I have no experience other than:</li>
+                        <li><span>2019 - Current</span><br>i work at Kmart!</li>
+                        <li><span>2023 - Current</span><br>i work as a tutor!</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - 2025</span><br>Bsc Computer Science from UNSW Sydney.</li>
+                        <li><span>some cool cert maybe</span><br>cos i have nothing else</li>
+                        <li><span>some other cool cert</span><br>i literally have nothing skull</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!----------template (services)----------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>I Go Gym</h2>
+                <p>WE GO JIM OOGA BOOGA Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut est justo. Donec vel congue turpis, quis porta augue. In nec tincidunt eros, et placerat sapien. Phasellus vehicula egestas neque. Donec lorem tellus, eleifend quis gravida vitae, iaculis vel nunc. Pellentesque et ante at tellus bibendum semper vel at sem. Duis vitae sem tortor.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                <h2>I'm a fast learner</h2>
+                <p>yeppers i legit have nothing else Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut est justo. Donec vel congue turpis, quis porta augue. In nec tincidunt eros, et placerat sapien. Phasellus vehicula egestas neque. Donec lorem tellus, eleifend quis gravida vitae, iaculis vel nunc. Pellentesque et ante at tellus bibendum semper vel at sem. Duis vitae sem tortor.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-dog"></i>
+                <h2>I can bark</h2>
+                <p>not my proudest service Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut est justo. Donec vel congue turpis, quis porta augue. In nec tincidunt eros, et placerat sapien. Phasellus vehicula egestas neque. Donec lorem tellus, eleifend quis gravida vitae, iaculis vel nunc. Pellentesque et ante at tellus bibendum semper vel at sem. Duis vitae sem tortor.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------portfolio----------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work-1.png">
+                <div class="layer">
+                    <h3>Project ONE</h3>
+                    <p>project description</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-2.png">
+                <div class="layer">
+                    <h3>Project TWO</h3>
+                    <p>project description</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-3.png">
+                <div class="layer">
+                    <h3>Project THREE</h3>
+                    <p>project description</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!----------Contact----------------- -->
 
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 
 
 </body>
