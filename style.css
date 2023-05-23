@@ -405,7 +405,8 @@ nav .fa-solid{
 }
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(Images-and-Files/phone-background.png);        
+        background-image: url(Images-and-Files/phone-background.png);
+        background-attachment: fixed;        
     }
         nav .fas{
         display: block;
