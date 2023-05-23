@@ -29,6 +29,7 @@ body{
     background-image: url(Images-and-Files/background.png);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 .container{
     padding: 10px 10%;
@@ -78,7 +79,6 @@ nav ul li a:hover::after{
 .header-text{
     margin-top: 20%;
     font-size: 30px;
-
 }
 .header-text h1{
     font-size: 60px;
